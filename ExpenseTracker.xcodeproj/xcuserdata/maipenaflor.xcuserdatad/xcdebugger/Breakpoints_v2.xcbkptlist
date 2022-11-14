@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Bucket
+   uuid = "B714C561-6425-46B8-907A-61F8D90AF8BB"
+   type = "1"
+   version = "2.0">
+   <Breakpoints>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "35CA41AD-09C6-4FAC-A1F5-44EF47375B5F"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "ExpenseTracker/Views/PickerRow.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "19"
+            endingLineNumber = "19"
+            landmarkName = "init(title:selections:selectedValue:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "AF307540-0957-4F04-84A8-093B919A4BF9"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "ExpenseTracker/Views/PickerRow.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "24"
+            endingLineNumber = "24"
+            landmarkName = "body"
+            landmarkType = "24">
+            <Locations>
+               <Location
+                  uuid = "AF307540-0957-4F04-84A8-093B919A4BF9 - 8e4252bda197f96"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "ExpenseTracker.PickerRow.body.getter : some"
+                  moduleName = "ExpenseTracker"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/maipenaflor/Documents/Personal/ExpenseTracker/ExpenseTracker/Views/PickerRow.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "24"
+                  endingLineNumber = "24"
+                  offsetFromSymbolStart = "452">
+               </Location>
+               <Location
+                  uuid = "AF307540-0957-4F04-84A8-093B919A4BF9 - a9256a5c457174aa"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 () -&gt; &lt;&lt;opaque return type of SwiftUI.View.foregroundColor(Swift.Optional&lt;SwiftUI.Color&gt;) -&gt; some&gt;&gt;.0 in ExpenseTracker.PickerRow.body.getter : some"
+                  moduleName = "ExpenseTracker"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/maipenaflor/Documents/Personal/ExpenseTracker/ExpenseTracker/Views/PickerRow.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "25"
+                  endingLineNumber = "25"
+                  offsetFromSymbolStart = "688">
+               </Location>
+               <Location
+                  uuid = "AF307540-0957-4F04-84A8-093B919A4BF9 - a9256a5c4571744b"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 () -&gt; &lt;&lt;opaque return type of SwiftUI.View.foregroundColor(Swift.Optional&lt;SwiftUI.Color&gt;) -&gt; some&gt;&gt;.0 in ExpenseTracker.PickerRow.body.getter : some"
+                  moduleName = "ExpenseTracker"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/maipenaflor/Documents/Personal/ExpenseTracker/ExpenseTracker/Views/PickerRow.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "24"
+                  endingLineNumber = "24"
+                  offsetFromSymbolStart = "1588">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+   </Breakpoints>
+</Bucket>
