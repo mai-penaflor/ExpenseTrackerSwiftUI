@@ -9,14 +9,34 @@ import SwiftUI
 
 struct ExpenseRow: View {
     let expense: ExpenseModel
+    
+    @State private var name: String = ""
+    @State private var amount: String = ""
+    @State private var paidText: String = ""
+    
     var body: some View {
-        Text(expense.name)
+        HStack(alignment: .center, content: {
+            VStack(alignment: .leading) {
+                Text(name)
+                Text(amount)
+                    .foregroundColor(Color(.lightGray))
+                    .font(.callout)
+            }
+            Spacer()
+            Text(paidText)
+                .foregroundColor(.green)
+        })
+        .frame(maxWidth: .infinity)
+        .onAppear{
+            name = expense.name
+            amount = String(format: "%.2f", expense.amount)
+            paidText = expense.isPaid ? "Paid" : ""
+        }
     }
 }
 
 struct ExpenseRow_Previews: PreviewProvider {
     static var previews: some View {
-        let testExpense = ExpenseModel(id: 0, name: "tesft", amount: 23.00, isPaid: true, datePaid: nil, dueDate: nil, reminderDate: nil, modeOfPayment: nil, referenceCode: "dasd", notes: "asd", frequency: .monthly, recordToTaxBooks: true)
-        ExpenseRow(expense: testExpense)
+        ExpenseRow(expense: ExpenseModel(name: "Globe Broadband", amount: 10.0, isPaid: true))
     }
 }

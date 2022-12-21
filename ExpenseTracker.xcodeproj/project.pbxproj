@@ -13,10 +13,17 @@
 		57066F942922073100F4832A /* ToggleRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57066F932922073100F4832A /* ToggleRow.swift */; };
 		57066F9629220B1700F4832A /* DateRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57066F9529220B1700F4832A /* DateRow.swift */; };
 		57066F9829220F6900F4832A /* PickerRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57066F9729220F6900F4832A /* PickerRow.swift */; };
+		572C0525294F27CF0004AD00 /* NumberTextfieldRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 572C0524294F27CF0004AD00 /* NumberTextfieldRow.swift */; };
+		572C0528294F36650004AD00 /* Binding+Utilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = 572C0527294F36650004AD00 /* Binding+Utilities.swift */; };
 		572C76B828EC3FF90099AA5E /* ListItemModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 572C76B728EC3FF90099AA5E /* ListItemModel.swift */; };
 		572C76BA28EC40060099AA5E /* ExpenseModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 572C76B928EC40060099AA5E /* ExpenseModel.swift */; };
 		572C76BC28EC40100099AA5E /* IncomeModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 572C76BB28EC40100099AA5E /* IncomeModel.swift */; };
 		572C76BE28EC40410099AA5E /* PaymentFrequency.swift in Sources */ = {isa = PBXBuildFile; fileRef = 572C76BD28EC40410099AA5E /* PaymentFrequency.swift */; };
+		5767ED8729502E2C0030B525 /* MonthlyBills.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5767ED8629502E2C0030B525 /* MonthlyBills.swift */; };
+		5770C99D29386CBC00118A48 /* AppleFileSystemService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5770C99B29386CBC00118A48 /* AppleFileSystemService.swift */; };
+		5770C99E29386CBC00118A48 /* FileSystemService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5770C99C29386CBC00118A48 /* FileSystemService.swift */; };
+		5770C9A029386D8800118A48 /* Expenses.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5770C99F29386D8800118A48 /* Expenses.swift */; };
+		5770C9A22938736100118A48 /* NotificationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5770C9A12938736100118A48 /* NotificationManager.swift */; };
 		57A297CA2885C404001C9F27 /* ExpenseTrackerApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57A297C92885C404001C9F27 /* ExpenseTrackerApp.swift */; };
 		57A297CC2885C404001C9F27 /* MainListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57A297CB2885C404001C9F27 /* MainListView.swift */; };
 		57A297CE2885C406001C9F27 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 57A297CD2885C406001C9F27 /* Assets.xcassets */; };
@@ -31,10 +38,17 @@
 		57066F932922073100F4832A /* ToggleRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToggleRow.swift; sourceTree = "<group>"; };
 		57066F9529220B1700F4832A /* DateRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateRow.swift; sourceTree = "<group>"; };
 		57066F9729220F6900F4832A /* PickerRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PickerRow.swift; sourceTree = "<group>"; };
+		572C0524294F27CF0004AD00 /* NumberTextfieldRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NumberTextfieldRow.swift; sourceTree = "<group>"; };
+		572C0527294F36650004AD00 /* Binding+Utilities.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Binding+Utilities.swift"; sourceTree = "<group>"; };
 		572C76B728EC3FF90099AA5E /* ListItemModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListItemModel.swift; sourceTree = "<group>"; };
 		572C76B928EC40060099AA5E /* ExpenseModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExpenseModel.swift; sourceTree = "<group>"; };
 		572C76BB28EC40100099AA5E /* IncomeModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IncomeModel.swift; sourceTree = "<group>"; };
 		572C76BD28EC40410099AA5E /* PaymentFrequency.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaymentFrequency.swift; sourceTree = "<group>"; };
+		5767ED8629502E2C0030B525 /* MonthlyBills.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MonthlyBills.swift; sourceTree = "<group>"; };
+		5770C99B29386CBC00118A48 /* AppleFileSystemService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppleFileSystemService.swift; sourceTree = "<group>"; };
+		5770C99C29386CBC00118A48 /* FileSystemService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FileSystemService.swift; sourceTree = "<group>"; };
+		5770C99F29386D8800118A48 /* Expenses.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Expenses.swift; sourceTree = "<group>"; };
+		5770C9A12938736100118A48 /* NotificationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationManager.swift; sourceTree = "<group>"; };
 		57A297C62885C404001C9F27 /* ExpenseTracker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ExpenseTracker.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		57A297C92885C404001C9F27 /* ExpenseTrackerApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExpenseTrackerApp.swift; sourceTree = "<group>"; };
 		57A297CB2885C404001C9F27 /* MainListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainListView.swift; sourceTree = "<group>"; };
@@ -65,10 +79,12 @@
 		572C76B628EC3FEC0099AA5E /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				5770C99F29386D8800118A48 /* Expenses.swift */,
 				572C76B728EC3FF90099AA5E /* ListItemModel.swift */,
 				572C76B928EC40060099AA5E /* ExpenseModel.swift */,
 				572C76BB28EC40100099AA5E /* IncomeModel.swift */,
 				57066F912922056C00F4832A /* ListRowModel.swift */,
+				5767ED8629502E2C0030B525 /* MonthlyBills.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -80,6 +96,7 @@
 				57B1BED128ED533D001A65BE /* ExpenseRow.swift */,
 				5702BA1028EEAEED006493CF /* ExpenseDetailView.swift */,
 				5702BA1228EEB0AC006493CF /* TextfieldRow.swift */,
+				572C0524294F27CF0004AD00 /* NumberTextfieldRow.swift */,
 				57066F932922073100F4832A /* ToggleRow.swift */,
 				57066F9529220B1700F4832A /* DateRow.swift */,
 				57066F9729220F6900F4832A /* PickerRow.swift */,
@@ -90,8 +107,20 @@
 		572C76C028EC40B70099AA5E /* Utilities */ = {
 			isa = PBXGroup;
 			children = (
+				5770C99A29386CBC00118A48 /* FileSystem */,
+				5770C9A12938736100118A48 /* NotificationManager.swift */,
+				572C0527294F36650004AD00 /* Binding+Utilities.swift */,
 			);
 			path = Utilities;
+			sourceTree = "<group>";
+		};
+		5770C99A29386CBC00118A48 /* FileSystem */ = {
+			isa = PBXGroup;
+			children = (
+				5770C99C29386CBC00118A48 /* FileSystemService.swift */,
+				5770C99B29386CBC00118A48 /* AppleFileSystemService.swift */,
+			);
+			path = FileSystem;
 			sourceTree = "<group>";
 		};
 		57A297BD2885C404001C9F27 = {
@@ -203,14 +232,21 @@
 			buildActionMask = 2147483647;
 			files = (
 				572C76BA28EC40060099AA5E /* ExpenseModel.swift in Sources */,
+				5770C9A22938736100118A48 /* NotificationManager.swift in Sources */,
+				5767ED8729502E2C0030B525 /* MonthlyBills.swift in Sources */,
 				572C76B828EC3FF90099AA5E /* ListItemModel.swift in Sources */,
+				5770C99E29386CBC00118A48 /* FileSystemService.swift in Sources */,
 				57066F9629220B1700F4832A /* DateRow.swift in Sources */,
+				5770C9A029386D8800118A48 /* Expenses.swift in Sources */,
+				572C0528294F36650004AD00 /* Binding+Utilities.swift in Sources */,
 				57066F942922073100F4832A /* ToggleRow.swift in Sources */,
+				572C0525294F27CF0004AD00 /* NumberTextfieldRow.swift in Sources */,
 				57A297CC2885C404001C9F27 /* MainListView.swift in Sources */,
 				5702BA1328EEB0AC006493CF /* TextfieldRow.swift in Sources */,
 				57066F922922056C00F4832A /* ListRowModel.swift in Sources */,
 				57B1BED228ED533D001A65BE /* ExpenseRow.swift in Sources */,
 				572C76BE28EC40410099AA5E /* PaymentFrequency.swift in Sources */,
+				5770C99D29386CBC00118A48 /* AppleFileSystemService.swift in Sources */,
 				57066F9829220F6900F4832A /* PickerRow.swift in Sources */,
 				572C76BC28EC40100099AA5E /* IncomeModel.swift in Sources */,
 				57A297CA2885C404001C9F27 /* ExpenseTrackerApp.swift in Sources */,

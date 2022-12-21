@@ -6,6 +6,7 @@
 //
 
 import Foundation
+import SwiftUI
 
 enum DataType: Int {
     case text = 0
@@ -17,9 +18,9 @@ enum DataType: Int {
 struct ListRowModel: Identifiable {
     let id: Int
     let title: String
-    var text: String? = nil
-    var isOn: Bool = false
-    var date: Date? = nil
+    @State var text: String = ""
+    @State var isOn: Bool = false
+    @State var date: Date? = nil
     var selections: [String]?
     var selectedValue: String?
     let isEditable = false

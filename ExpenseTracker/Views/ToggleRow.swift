@@ -9,21 +9,21 @@ import SwiftUI
 
 struct ToggleRow: View {
     let title: String
-    @State var isOn: Bool = true
+    @Binding var isOn: Bool
     
     var body: some View {
         VStack(alignment: .leading, spacing: 0, content: {
             Toggle("\(title)".uppercased(), isOn: $isOn)
-                .font(.caption
-                    .weight(.bold)
-                )
-                .foregroundColor(.gray)
+            .font(.caption
+                .weight(.bold)
+            )
+            .foregroundColor(.gray)
         })
     }
 }
 
 struct ToggleRow_Previews: PreviewProvider {
     static var previews: some View {
-        ToggleRow(title: "Switch", isOn: true)
+        ToggleRow(title: "Switch", isOn: .constant(true))
     }
 }

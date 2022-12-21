@@ -8,19 +8,20 @@
 import SwiftUI
 
 struct MainListView: View {
-    @StateObject var viewModel: ViewModel
+    @State private var showNew = false
     
-    init(viewModel: ViewModel = .init()) {
-        _viewModel = StateObject(wrappedValue: viewModel)
-    }
+    private let fileSystemService = AppleFileSystemService.shared
+    private let expensesFileName = "expenses.json"
+    
+    @State private var sections = [MonthlyBills]()
+    @State private var items = [ExpenseModel]()
     
     var body: some View {
         NavigationView {
-            List(viewModel.sections) { section in
+            List(sections) { section in
                 Section(header: Text(section.name)) {
                     ForEach(section.items) { item in
-                        let expenseViewModel = ExpenseDetailView.ViewModel(expense: item)
-                        let expenseView = ExpenseDetailView(viewModel: expenseViewModel)
+                        let expenseView = ExpenseDetailView(expense: item)
                         NavigationLink(destination: expenseView) {
                             ExpenseRow(expense: item)
                         }
@@ -28,21 +29,82 @@ struct MainListView: View {
                 }
             }
             .navigationTitle("Monthly Dues")
+            .background(
+                    NavigationLink(destination: ExpenseDetailView(expense: ExpenseModel()), isActive: $showNew) {
+                      EmptyView()
+                    }
+                )
+            .toolbar {
+                ToolbarItem(placement: .navigationBarTrailing) {
+                    NavigationLink("Add", destination: ExpenseDetailView(expense: ExpenseModel()))
+                    Button {
+                        showNew = true
+                    } label: {
+                        Image(systemName: "plus")
+                    }
+                    
+                }
+            }
         }
         .onAppear(perform: {
-            viewModel.getItems()
+            getItems()
         })
+        .onReceive(NotificationCenter.default.publisher(for: NotificationManager.didSaveExpense)) { notification in
+           guard let expense = notification.object as? ExpenseModel else { return }
+            saveExpense(expense)
+        }
+    }
+    
+    private func didSaveExpense(_ notification: Notification) {
+        guard let expense = notification.object as? ExpenseModel else { return }
+        saveExpense(expense)
     }
 }
 
 extension MainListView {
-    class ViewModel: ObservableObject {
-        @Published var sections = [MonthlyBills]()
-        @Published var items = [ExpenseModel]()
-        func getItems() {
-            items = [ExpenseModel(id: 0, name: "test", amount: 23.00, isPaid: true, datePaid: nil, dueDate: nil, reminderDate: nil, modeOfPayment: nil, referenceCode: "dasd", notes: "asd", frequency: .monthly, recordToTaxBooks: true)]
-            sections = [MonthlyBills(id: 0, name: "October", items: items), MonthlyBills(id: 1, name: "September", items: items), MonthlyBills(id: 2, name: "August", items: items)]
+    
+    func getItems() {
+        retrieveExpenses()
+    }
+    
+    func retrieveExpenses() {
+        do {
+            let filePath = fileSystemService.documentsDirectory.appendingPathComponent(expensesFileName)
+            if let retrievedData = try fileSystemService.retrieve(from: filePath) {
+                let expenses = try JSONDecoder().decode(Expenses.self, from: retrievedData)
+                let items = expenses.items.filter {
+                    return Calendar.current.component(.month, from: $0.datePaid ?? Date()) == 1
+                }
+                let dec = MonthlyBills()
+                dec.name = "December"
+                dec.items = items
+                sections = [dec] //TODO: Create dynamically
+            }
+        } catch let error {
+            print("Error while retrieving data: \(error.localizedDescription)")
         }
+    }
+    
+    func saveExpenses() {
+        do {
+            let data = try JSONEncoder().encode(Expenses(expenses: items))
+            let filePath = fileSystemService.documentsDirectory.appendingPathComponent(expensesFileName)
+            try fileSystemService.save(data: data, to: filePath)
+        } catch let error {
+            print("Error while saving data: \(error.localizedDescription)")
+        }
+    }
+    
+    func saveExpense(_ expense: ExpenseModel) {
+        items.removeAll(where: { $0.id == expense.id })
+        items.append(expense)
+        
+        let dec = MonthlyBills()
+        dec.name = "December"
+        dec.items = items
+        sections = [dec] //TODO: Create dynamically
+        
+        saveExpenses()
     }
 }
 
@@ -50,10 +112,4 @@ struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
         MainListView()
     }
-}
-
-struct MonthlyBills: Identifiable {
-    let id: Int
-    let name: String
-    let items: [ExpenseModel]
 }

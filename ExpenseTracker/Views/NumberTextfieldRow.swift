@@ -1,15 +1,17 @@
 //
-//  TextfieldRow.swift
+//  NumberTextfieldRow.swift
 //  ExpenseTracker
 //
-//  Created by Mai Peñaflor on 2022-10-06.
+//  Created by Mai Peñaflor on 2022-12-18.
 //
 
 import SwiftUI
 
-struct TextfieldRow: View {
+struct NumberTextfieldRow: View {
     let title: String
-    @Binding var text: String
+    @Binding var value: Double
+    
+    @State private var text = ""
     
     var body: some View {
         VStack() {
@@ -19,13 +21,9 @@ struct TextfieldRow: View {
                         .weight(.bold)
                     )
                     .foregroundColor(.gray)
-                TextField(
-                    "",
-                    text: $text,
-                    onCommit: {
-                        //code here
-                    }
-                )
+                TextField("", text: $text, onEditingChanged: { (changed) in
+                    value = Double(text) ?? 0
+                })
                 .padding(.leading, 12.0)
                 .padding(.trailing, 12.0)
                 .font(.body)
@@ -41,13 +39,17 @@ struct TextfieldRow: View {
                                 .fill(Color.init(white: 0.97))
                         )
                 )
+                .keyboardType(.decimalPad)
             })
+        }
+        .onAppear{
+            text = value > 0.0 ? String(value) : ""
         }
     }
 }
 
-struct TextfieldRow_Previews: PreviewProvider {
+struct NumberTextfieldRow_Previews: PreviewProvider {
     static var previews: some View {
-        TextfieldRow(title: "Title", text: .constant("Text"))
+        NumberTextfieldRow(title: "Title", value: .constant(0))
     }
 }

@@ -9,23 +9,30 @@ import SwiftUI
 
 struct DateRow: View {
     let title: String
-    @State var leftPadding: CGFloat = 0
-    @State var date = Date()
+    @Binding var date: Date?
+    
+    @State private var selectedDate = Date()
     
     var body: some View {
         VStack(alignment: .leading, spacing: 0, content: {
-            DatePicker("\(title)".uppercased(), selection: $date, displayedComponents: [.date])
+            DatePicker("\(title)".uppercased(), selection: $selectedDate, displayedComponents: [.date])
                 .font(.caption
                     .weight(.bold)
                 )
                 .foregroundColor(.gray)
+                .onChange(of: date, perform: { value in
+                    date = value
+               })
         })
-        .padding(.leading, leftPadding)
+        .padding(.leading, 0)
+        .onAppear{
+            selectedDate = date ?? Date()
+        }
     }
 }
 
 struct DateRow_Previews: PreviewProvider {
     static var previews: some View {
-        DateRow(title: "Date Paid", date: Date())
+        DateRow(title: "Date", date: .constant(Date()))
     }
 }
